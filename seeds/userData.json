@@ -1,0 +1,17 @@
+[
+  {
+    "name": "bussudo",
+    "activity": "walk",
+    "pointCount": 20
+  },
+  {
+    "name": "susyque",
+    "activity": "recycle newspaper",
+    "pointCount": 10
+  },
+  {
+    "name": "billybob",
+    "activity": "recycle water bottle",
+    "pointCount": 5
+  }
+]
