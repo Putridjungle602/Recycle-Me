@@ -1,0 +1,22 @@
+[
+  {
+    "activity": "walk",
+    "points": 20
+  },
+  {
+    "activity": "bike",
+    "points": 50
+  },
+  {
+    "activity": "recycle newspaper",
+    "points": 10
+  },
+  {
+    "activity": "recycle plastic",
+    "points": 10
+  },
+  {
+    "activity": "recycle water bottle",
+    "points": 5
+  }
+]
