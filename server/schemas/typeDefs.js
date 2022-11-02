@@ -7,30 +7,25 @@ const typeDefs = gql`
     email: String
     password: String
     accPoints: Int
-    earnedWhen: Date
-    activities: [Activity]
+    dateEarned: String
+    activity: String
   }
 
   type Activity {
     _id: ID
     activity: String
     points: Int
-    username: User
   }
 
   type Query {
     activity: [Activity]
-    username(userId: ID!): Activity
+    username: User
   }
 
   type Mutation {
-    createActivity(activity!: String, username: String!): Activity
-    createUser(userId: ID!, username: String!): Activity
     removeActivity(activityId: ID!): Activity
-    removeUser(userId: ID!, activityId: ID!): Activity
+    createActivity(name: String!, points: Int!): Activity
   }
 `;
 
 module.exports = typeDefs;
-
-// I will come back and add points later, keeping it simple for now

@@ -23,8 +23,9 @@ const userSchema = new Schema(
     },
     accPoints: {
       type: Number,
+      default: 0,
     },
-    earnedWhen: {
+    dateEarned: {
       type: Date,
       default: Date.now,
       get: (Timenow) => dateFormatter(Timenow),

@@ -2,33 +2,21 @@
   {
     "username": "fasteddie",
     "email": "eddie@mail.com",
-    "password": "12345678",
-    "activity": "walk",
-    "points": 20,
-    "accPoints": 80
+    "password": "12345678"
   },
   {
     "username": "susyque",
     "email": "susie@yahoo.com",
-    "password": "87654321",
-    "activity": "recycle newspaper",
-    "points": 10,
-    "accPoints": 50
+    "password": "87654321"
   },
   {
     "username": "billybob",
     "email": "billy@email.com",
-    "password": "MSUBootCamp",
-    "activity": "recycle water bottle",
-    "points": 5,
-    "accPoints": 20
+    "password": "MSUBootCamp"
   },
   {
     "username": "JohnnyBGoode",
     "email": "jbg@email.com",
-    "password": "goJohnnygo",
-    "activity": "bike",
-    "points": 50,
-    "accPoints": 300
+    "password": "goJohnnygo"
   }
 ]
