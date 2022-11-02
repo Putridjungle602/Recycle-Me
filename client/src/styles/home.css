@@ -1,0 +1,32 @@
+.homeContainer {
+  position: relative;
+  overflow-y: scroll;
+}
+
+.homeFeatContent {
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 700;
+  color: #4e944f;
+  line-height: 45px;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .homeContainer {
+    overflow-y: unset;
+  }
+}
+@media (min-width: 1024px) {
+  .homeFeatContent {
+    line-height: 70px;
+    letter-spacing: 2px;
+  }
+}
+@media (min-width: 1366px) {
+  .homeFeatContent {
+    line-height: 60px;
+  }
+}

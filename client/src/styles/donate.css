@@ -1,0 +1,45 @@
+.donateContainer {
+  position: relative;
+  height: 85vh;
+  text-align: center;
+}
+
+.donatePortWrap {
+  background-color: #4e944f;
+  text-align: center;
+  position: absolute;
+  padding-top: 20px;
+  width: 100%;
+  height: 70vh;
+  overflow-y: scroll;
+  top: 8vh;
+  left: 0;
+  display: block;
+  z-index: 2;
+  scrollbar-face-color: #83bd75;
+  scrollbar-shadow-color: #ffffff;
+  scrollbar-highlight-color: #ffffff;
+  scrollbar-3dlight-color: #ffffff;
+  scrollbar-darkshadow-color: #ffffff;
+  scrollbar-track-color: #ffffff;
+  scrollbar-arrow-color: #ffffff;
+}
+
+.donatePortWrap::-webkit-scrollbar {
+  width: 8px;
+}
+
+.donatePortWrap::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.donatePortWrap::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #4e944f;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
