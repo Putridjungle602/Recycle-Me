@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const { dateFormatter } = require("../utils/format.js");
 
 const activitySchema = new Schema({
   activity: {
@@ -9,9 +8,9 @@ const activitySchema = new Schema({
     maxlength: 280,
     trim: true,
   },
-  
+
   points: {
-    type: Int,
+    type: Number,
     required: true,
   },
 });
