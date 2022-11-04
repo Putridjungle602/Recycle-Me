@@ -1,0 +1,57 @@
+[
+  {
+    "activity": "walk",
+    "description": "alternative transportation per mile",
+    "points": 5
+  },
+  {
+    "activity": "bike",
+    "description": "alternative transportation per mile",
+    "points": 5
+  },
+  {
+    "activity": "carpool",
+    "description": "alternative transportation per mile",
+    "points": 5
+  },
+  {
+    "activity": "recycle newspaper",
+    "description": "newspaper",
+    "points": 1
+  },
+  {
+    "activity": "recycle small cardboard box",
+    "description": "smaller boxes i.e. small appliance  shoe box or smaller",
+    "points": 2
+  },
+  {
+    "activity": "recycle large cardboard box",
+    "description": "large boxes i.e. large appliance box",
+    "points": 4
+  },
+  {
+    "activity": "recycle plastic store bag",
+    "description": "grocery store bag",
+    "points": 1
+  },
+  {
+    "activity": "recycle can",
+    "description": "aluminum can",
+    "points": 1
+  },
+  {
+    "activity": "recycle small glass bottle",
+    "description": "larger glass containers i.e. wine bottle",
+    "points": 1
+  },
+  {
+    "activity": "recycle large glass bottle",
+    "description": "larger glass containers i.e. wine bottle",
+    "points": 3
+  },
+  {
+    "activity": "recycle water bottle",
+    "description": "plastic water or soda bottles",
+    "points": 1
+  }
+]
