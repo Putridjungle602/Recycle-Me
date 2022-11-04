@@ -14,6 +14,7 @@ const typeDefs = gql`
   type Activity {
     _id: ID
     activity: String
+    activityCompleted: Boolean
     points: Int
   }
 

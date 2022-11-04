@@ -8,6 +8,9 @@ const activitySchema = new Schema({
     maxlength: 280,
     trim: true,
   },
+  activityCompleted: {
+    type: Boolean,
+  },
 
   points: {
     type: Number,
