@@ -8,10 +8,15 @@ const activitySchema = new Schema({
     maxlength: 280,
     trim: true,
   },
+  description: {
+    type: String,
+    required: "Please enter a description",
+    minlength: 1,
+    maxlength: 280,
+  },
   activityCompleted: {
     type: Boolean,
   },
-
   points: {
     type: Number,
     required: true,
