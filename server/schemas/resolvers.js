@@ -2,13 +2,6 @@ const { Activity, User } = require("../models");
 
 const resolvers = {
   Query: {
-    // activity
-    // : async () => {
-    //   return await User.find({}).populate(points).populate({
-    //     path: 'points',
-    //     populate: 'username'
-    //   });
-    // },
     activity: async () => {
       return Activity.find().sort({ createdAt: -1 });
     },
