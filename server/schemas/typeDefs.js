@@ -8,7 +8,7 @@ const typeDefs = gql`
     password: String
     accPoints: Int
     dateEarned: String
-    activity: String
+    activity: [Activity]
   }
 
   type Activity {
@@ -18,13 +18,19 @@ const typeDefs = gql`
     activityCompleted: Boolean
     points: Int
   }
-
+  type Auth {
+    token: ID!
+    user: User
+  }
   type Query {
     activity: [Activity]
-    username: User
+    username: [User]
+    me: User
   }
 
   type Mutation {
+    createUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
     removeActivity(activityId: ID!): Activity
     createActivity(name: String!, points: Int!): Activity
   }

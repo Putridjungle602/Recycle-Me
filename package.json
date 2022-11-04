@@ -8,13 +8,14 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "cd client && npm run build",
-    "seed":  "node server/seeds/seed.js"
+    "seed": "node server/seeds/seed.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.5.0"
+    "concurrently": "^7.5.0",
+    "graphql-iso-date": "^3.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
