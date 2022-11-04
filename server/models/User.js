@@ -26,8 +26,7 @@ const userSchema = new Schema(
       default: 0,
     },
     dateEarned: {
-      type: Date,
-      get: (Timenow) => dateFormatter(Timenow),
+      type: String,
     },
     activity: [
       {
