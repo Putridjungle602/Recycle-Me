@@ -1,4 +1,4 @@
-import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 
 export const Colors = {
   primary: "#208B3A",
