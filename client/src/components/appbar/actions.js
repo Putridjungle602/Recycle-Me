@@ -1,5 +1,5 @@
-import { ListItem, ListItemIcon } from "@material-ui/core";
-import PersonIcon from "@material-ui/icons/Person";
+import { ListItem, ListItemIcon } from "@mui/material";
+import PersonIcon from "@mui/icons-material/Person";
 import {
   ActionIconsContainerMobile,
   ActionIconsContainerDesktop,
