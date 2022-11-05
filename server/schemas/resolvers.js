@@ -51,6 +51,9 @@ const resolvers = {
     removeActivity: async (parent, { activityId }) => {
       return Activity.findOneAndUpdate({ _id: activityId }, { new: true });
     },
+    updateUserPoints: async(parent,{_id, points}) => {
+      return await User.findByIdAndUpdate(_id, {points}, {new: true})
+    }
   },
 };
 
