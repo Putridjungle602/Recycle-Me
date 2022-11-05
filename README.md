@@ -29,5 +29,4 @@ Recycle me is an app that allows a user to login and track how much they were ab
 
 https://github.com/Putridjungle602/Recycle-Me
 
-https://dashboard.heroku.com/apps/recycle-mee/deploy/github
-
+https://recycle-mee.herokuapp.com/
