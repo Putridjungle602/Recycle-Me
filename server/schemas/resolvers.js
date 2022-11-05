@@ -52,7 +52,7 @@ const resolvers = {
       return Activity.findOneAndUpdate({ _id: activityId }, { new: true });
     },
     updateUserPoints: async(parent,{_id, points}) => {
-      return await User.findByIdAndUpdate(_id, {points}, {new: true})
+      return await User.findByIdAndUpdate({_id}, {accPoints: points}, {new: true})
     }
   },
 };
