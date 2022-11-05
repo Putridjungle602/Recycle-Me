@@ -1,9 +1,9 @@
-import { Grid, Box, Typography } from "@material-ui/core";
+import { Grid, Box, Typography } from "@mui/material";
 import { FooterTitle } from "../../styles/footer";
 import { Colors } from "../../styles/theme";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function footer() {
   return (

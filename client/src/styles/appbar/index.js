@@ -1,6 +1,6 @@
-import { styled } from "@material-ui/core/styles";
-import { Box, List } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
+import { styled } from "@mui/material/styles";
+import { Box, List } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import { Colors } from "../theme";
 
 //container

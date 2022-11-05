@@ -1,6 +1,6 @@
-import { Button, Container } from "@material-ui/core";
-import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-// import Typography from "@material-ui/core/Typography";
+import { Button, Container } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+// import Typography from "@mui/core/Typography";
 import { useEffect } from "react";
 import theme from "./styles/theme";
 import Appbar from "./components/appbar";
