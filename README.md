@@ -25,7 +25,7 @@ Recycle me is an app that allows a user to login and track how much they were ab
 
 ### Screenshot
 
-![Alt Text](./public/images/Screenshot.png)
+![Alt Text](./client/public/images/Screenshot.png)
 
 https://github.com/Putridjungle602/Recycle-Me
 
