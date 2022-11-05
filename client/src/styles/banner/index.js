@@ -18,7 +18,15 @@ export const BannerContainer = styled(Box)(({ theme }) => ({
 
 export const BannerImage = styled("img")(({ src, theme }) => ({
   src: `url(${src})`,
-  width: "500px",
+  width: "100%",
+  height: "100%",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: -1,
+  opacity: 0.4,
   [theme.breakpoints.down("md")]: {
     width: "350px",
   },
@@ -36,6 +44,8 @@ export const BannerContent = styled(Box)(() => ({
   alignItems: "center",
   maxWidth: 420,
   padding: "30px",
+  
+
 }));
 
 export const BannerTitle = styled(Typography)(({ theme }) => ({
