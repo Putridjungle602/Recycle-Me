@@ -1,6 +1,6 @@
 import { Button, Container } from "@material-ui/core";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import { useEffect } from "react";
 import theme from "./styles/theme";
 import Appbar from "./components/appbar";
@@ -35,9 +35,10 @@ const client = new ApolloClient({
 
 
 function App() {
-  useEffect(() => {
-    document.title = "Recycle Me";
-  }, []);
+  // useEffect(() => {
+  //   document.title = "Recycle Me";
+  // }, []);
+
   return (
 
   <ApolloProvider client={client}>
@@ -53,7 +54,6 @@ function App() {
         <Footer />
         {
           // title
-          // footer
         }
       </Container>
     </ThemeProvider>
