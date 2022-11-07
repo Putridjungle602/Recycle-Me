@@ -10,7 +10,6 @@ const activitySchema = new Schema({
   },
   description: {
     type: String,
-    required: "Please enter a description",
     minlength: 1,
     maxlength: 280,
   },

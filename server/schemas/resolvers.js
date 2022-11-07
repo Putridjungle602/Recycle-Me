@@ -51,9 +51,18 @@ const resolvers = {
     removeActivity: async (parent, { activityId }) => {
       return Activity.findOneAndUpdate({ _id: activityId }, { new: true });
     },
-    updateUserPoints: async(parent,{_id, points}) => {
-      return await User.findByIdAndUpdate({_id}, {accPoints: points}, {new: true})
-    }
+    // User.findOneAndUpdate({ _id: context._id }, { $inc: {'earnedPoints': 100 } }, {new: true },)
+    updateUserPoints: async (parent, { points }, context) => {
+      if (context.user) {
+        let updateData = User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $inc: { accPoints: points } },
+          { new: true }
+        );
+        return updateData;
+      }
+      throw new AuthenticationError("user not logged in");
+    },
   },
 };
 

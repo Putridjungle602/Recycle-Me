@@ -33,7 +33,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     removeActivity(activityId: ID!): Activity
     createActivity(name: String!, points: Int!): Activity
-    updateUserPoints(_id: ID, points: Int!): User
+    updateUserPoints(points: Int): User
   }
 `;
 
