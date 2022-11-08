@@ -15,6 +15,7 @@ const activitySchema = new Schema({
   },
   activityCompleted: {
     type: Boolean,
+    default: false,
   },
   points: {
     type: Number,

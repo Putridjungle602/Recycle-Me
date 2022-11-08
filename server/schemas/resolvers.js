@@ -13,7 +13,8 @@ const resolvers = {
       throw new AuthenticationError("not logged in");
     },
     activity: async () => {
-      return Activity.find().sort({ createdAt: -1 });
+      let activities = await Activity.find();
+      return activities;
     },
     //
     username: async () => {

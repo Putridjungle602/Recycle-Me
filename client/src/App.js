@@ -1,82 +1,45 @@
 import { Button, Container } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+//Addded Extra
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+
 // import Typography from "@mui/core/Typography";
 import { useEffect } from "react";
 import theme from "./styles/theme";
 import Appbar from "./components/appbar";
-import Banner from "./components/banner";
 import Footer from "./components/footer";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import BoxContainer from "./components/BoxContainer";
-
-const products = [
-  {
-    name : "Small Cardboard Box",
-    desc : "smaller boxes small aplliance / shoe box or smaller",
-    price : 2
-  },
-  {
-    name : "Large Cardboard Box",
-    desc : "boxes Larger then you typical small appliance box",
-    price : 4
-  },
-  {
-    name : "Plastic Store Bag",
-    desc : "grocerie stor bags",
-    price : 1
-  },
-  {
-    name : "Can",
-    desc : "aluminum cans",
-    price : 1
-  },
-  {
-    name : "Plastic Bottle",
-    desc : "plastic water or soda bottles",
-    price : 1
-  },
-  {
-    name : "Large Glass Bottle",
-    desc : "Larger glass containers like wine bottles",
-    price : 3
-  },
-  {
-    name : "Small Glass Bottle",
-    desc : "small glass containers such as pop or beer bottles",
-    price : 1
-  },
-  {
-    name : "Alternative Transport per Mile",
-    desc : "walking, biking , or carpooling",
-    price : 5
-  }
-];
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
+
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
 
 const client = new ApolloClient({
+  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
 
 function App() {
   // useEffect(() => {
@@ -84,27 +47,27 @@ function App() {
   // }, []);
 
   return (
+    <ApolloProvider client={client}>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <Container
+            maxWidth="xl"
+            sx={{
+              background: "#fff",
+            }}
+          >
+            <Appbar />
 
-  <ApolloProvider client={client}>
-    <ThemeProvider theme={theme}>
-      <Container
-        maxWidth="xl"
-        sx={{
-          background: "#fff",
-        }}
-      >
-        <Appbar />
-        <Banner />
-        {products.map((product, idx) => (
-          <BoxContainer key={idx} name={product.name} desctiprion={product.desc} points={product.price} />
-        ))}
-        
-        <Footer />
-        {
-          // title
-        }
-      </Container>
-    </ThemeProvider>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signUp" element={<SignUp />} />
+            </Routes>
+
+            <Footer />
+          </Container>
+        </ThemeProvider>
+      </Router>
     </ApolloProvider>
   );
 }
