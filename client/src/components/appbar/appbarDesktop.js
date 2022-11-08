@@ -8,15 +8,31 @@ import {
 import { ListItemText, ListItemIcon, ListItem } from "@mui/material";
 import Actions from "./actions";
 
+//Added Extra for functionality
+import { Link } from "react-router-dom";
+import Auth from "../../utils/auth";
+//creates login/logout and also signup to appear
 export default function AppbarDesktop({ matches }) {
   return (
     <AppbarContainer>
       <AppbarHeader>Recycle Me</AppbarHeader>
       <MyList type="row">
-        <ListItemText sx={{ margin:2 }} primary="Home" />
-        <ListItemText sx={{ margin:2 }} primary="Learn" />
-        <ListItemText sx={{ margin:2 }} primary="Donate" />
-        <ListItemText sx={{ margin:2 }} primary="Badges" />
+        <Link to="/">
+          <ListItemText sx={{ margin: 2 }} primary="Home" />
+        </Link>
+        <ListItemText sx={{ margin: 2 }} primary="Learn" />
+        <ListItemText sx={{ margin: 2 }} primary="Donate" />
+        <ListItemText sx={{ margin: 2 }} primary="Badges" />
+
+        {Auth.loggedIn() ? (
+          <Link onClick={Auth.logout}>
+            <ListItemText sx={{ margin: 2 }} primary="Logout" />
+          </Link>
+        ) : (
+          <Link to="/login">
+            <ListItemText sx={{ margin: 2 }} primary="Login/SignUp" />
+          </Link>
+        )}
         <ListItem button={true}>
           <ListItemIcon></ListItemIcon>
         </ListItem>
