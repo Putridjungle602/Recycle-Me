@@ -20,7 +20,7 @@ export default function Banner() {
         <Typography variant="h6">Learn more about recycling here</Typography>
         <BannerTitle variant="h2">Earn Points Here!</BannerTitle>
         <BannerDescription variant="subtitle">
-          Do your part and we'll do the rest for you!
+          Do your part and we'll do the rest!
         </BannerDescription>
       </BannerContent>
     </BannerContainer>
