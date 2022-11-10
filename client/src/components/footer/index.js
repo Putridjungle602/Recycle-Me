@@ -21,7 +21,7 @@ export default function footer() {
         <Grid item md={6} lg={4}>
           <FooterTitle variant="body1">About useEffect</FooterTitle>
           <Typography variant="caption2">
-            We want to help you help the planet in the smallest ways we can. We
+            We want to help you help the planet in even the smallest ways. We
             know you're busy so we make it easy.
           </Typography>
           <Box

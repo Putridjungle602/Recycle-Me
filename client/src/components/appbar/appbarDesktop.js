@@ -18,15 +18,15 @@ export default function AppbarDesktop({ matches }) {
       <AppbarHeader>Recycle Me</AppbarHeader>
       <MyList type="row">
         <Link to="/">
-          <ListItemText sx={{ margin: 2 }} primary="Home" />
+          <ListItemText sx={{ margin: 5 }} primary="Home" />
         </Link>
-        <ListItemText sx={{ margin: 2 }} primary="Learn" />
-        <ListItemText sx={{ margin: 2 }} primary="Donate" />
-        <ListItemText sx={{ margin: 2 }} primary="Badges" />
+        <ListItemText sx={{ margin: 5 }} primary="Learn" />
+        <ListItemText sx={{ margin: 5 }} primary="Donate" />
+        <ListItemText sx={{ margin: 5 }} primary="Badges" />
 
         {Auth.loggedIn() ? (
           <Link onClick={Auth.logout}>
-            <ListItemText sx={{ margin: 2 }} primary="Logout" />
+            <ListItemText sx={{ margin: 5 }} primary="Logout" />
           </Link>
         ) : (
           <Link to="/login">
