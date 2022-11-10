@@ -1,16 +1,25 @@
+//Extra things added -- need the mutation syntax and the useMutation method to convert the mutation
+// import { UPDATEUSERPOINTS } from "../utils/mutations";
+// import { useMutation } from "@apollo/client";
+//-----
+
 import { gql } from "@apollo/client";
 
 export const UPDATEUSERPOINTS = gql`
-  mutation UpdateUserPoints($points: Int) {
+  mutation Mutation($points: Int) {
     updateUserPoints(points: $points) {
-      accPoints
-      activity {
-        activity
-      }
-      dateEarned
-      email
-      username
       _id
+      username
+      email
+      activity {
+        _id
+        activity
+        description
+        activityCompleted
+        points
+      }
+      accPoints
+      dateEarned
     }
   }
 `;
